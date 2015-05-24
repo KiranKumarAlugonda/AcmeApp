@@ -12,18 +12,19 @@
                 "$urlRouterProvider",
         function($stateProvider, $urlRouterProvider){
             $urlRouterProvider.otherwise("/");
-
+             //default state
             $stateProvider
                 .state("home", {
                     url: "/",
                     templateUrl: "app/welcomeView.html"
                 })
-                // Products
+                // Products list state
                 .state("productList", {
                     url: "/products",
                     templateUrl: "app/products/productListView.html",
                     controller: "ProductListCtrl as vm"
                 })
+                //Product Edit State
                 .state("productEdit", {
                     url: "/products/edit/:productId",
                     templateUrl: "app/products/productEditView.html",
